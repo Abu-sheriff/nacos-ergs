@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Auditor Reports Table - NACOS Audit System</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec8a",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#10221a",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Public Sans", sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d1b15] dark:text-white min-h-screen flex">
+<!-- Sidebar Navigation -->
+<aside class="w-64 border-r border-[#e7f3ee] dark:border-white/10 bg-white dark:bg-[#10221a] sticky top-0 h-screen flex flex-col">
+<div class="p-6 flex flex-col h-full justify-between">
+<div class="flex flex-col gap-8">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="NACOS Logo Green Abstract" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAIgLB9UmUtFyueOxTzaXC_189BAQjMpwn5zeXawbqHn5tz7M8kNwW2--3nOYB33LbIdVRZ8MJecoHI8neWoVyOHfxTKkQeelrYBcqDbwPfMngfF0Apj-OEs4Zf4gn4pa70OnUCBxhG-8NKIACmBoF3G4WqZNnUa14ITCEJ5cXWojGL3OqYD2jM5EriTaUPE5dFnvH4Kb1eRx9ssdJbB-C5_Mm0TicLGRyacZIp_mgWUocg3JZX1-fy8Kg_lzy3pN4Clk1E4UidZOE");'></div>
+<h1 class="text-[#0d1b15] dark:text-white text-base font-bold leading-normal">NACOS Auditor</h1>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#e7f3ee] dark:hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">dashboard</span>
+<p class="text-sm font-medium">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-[#e7f3ee] dark:bg-primary/20 text-[#0d1b15] dark:text-primary" href="#">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1">description</span>
+<p class="text-sm font-medium">Audit Reports</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#e7f3ee] dark:hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">payments</span>
+<p class="text-sm font-medium">Payments</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#e7f3ee] dark:hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined text-xl">group</span>
+<p class="text-sm font-medium">Students</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[#e7f3ee] dark:hover:bg-white/5 transition-colors mt-4 border-t border-[#e7f3ee] dark:border-white/5 pt-6" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+<p class="text-sm font-medium">Settings</p>
+</a>
+</nav>
+</div>
+<div class="flex items-center gap-3 border-t border-[#e7f3ee] dark:border-white/10 pt-4">
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">account_circle</span>
+</div>
+<div class="flex flex-col">
+<p class="text-xs font-bold">Admin Auditor</p>
+<p class="text-[10px] opacity-60">Session: 2023/2024</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between border-b border-[#e7f3ee] dark:border-white/10 px-10 py-4 bg-white dark:bg-[#10221a]">
+<div class="flex items-center gap-4">
+<h2 class="text-[#0d1b15] dark:text-white text-lg font-bold tracking-tight">NACOS Audit System</h2>
+</div>
+<div class="flex gap-3">
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-[#0d1b15] text-sm font-bold transition-opacity hover:opacity-90">
+<span class="material-symbols-outlined mr-2 text-lg">picture_as_pdf</span>
+<span class="truncate">Download PDF</span>
+</button>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-[#e7f3ee] dark:bg-white/10 text-[#0d1b15] dark:text-white text-sm font-bold transition-opacity hover:opacity-80">
+<span class="material-symbols-outlined mr-2 text-lg">csv</span>
+<span class="truncate">Export CSV</span>
+</button>
+</div>
+</header>
+<div class="p-10 flex flex-col gap-8 max-w-[1200px] mx-auto w-full">
+<!-- Page Heading -->
+<div class="flex flex-col gap-2">
+<h1 class="text-[#0d1b15] dark:text-white text-4xl font-black tracking-tight">Audit Reports</h1>
+<p class="text-[#4c9a77] dark:text-primary/70 text-base font-normal">Manage and export payment data for administrative record-keeping and financial compliance.</p>
+</div>
+<!-- Filters Bar -->
+<div class="bg-white dark:bg-white/5 border border-[#e7f3ee] dark:border-white/10 rounded-xl p-4 flex flex-wrap items-center gap-4 shadow-sm">
+<!-- Search -->
+<div class="flex-1 min-w-[280px]">
+<label class="flex flex-col w-full">
+<div class="flex w-full items-stretch rounded-lg h-11 bg-[#e7f3ee] dark:bg-white/5 border border-transparent focus-within:border-primary transition-all">
+<div class="text-[#4c9a77] flex items-center justify-center pl-4">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="w-full bg-transparent border-none focus:ring-0 text-[#0d1b15] dark:text-white placeholder:text-[#4c9a77] px-4 text-sm font-normal" placeholder="Search by name, student ID or reference..." value=""/>
+</div>
+</label>
+</div>
+<!-- Level Dropdown -->
+<div class="w-48">
+<div class="relative">
+<select class="w-full h-11 bg-[#e7f3ee] dark:bg-white/5 border-none rounded-lg text-sm font-medium px-4 appearance-none cursor-pointer focus:ring-2 focus:ring-primary/50 text-[#0d1b15] dark:text-white">
+<option value="">All Academic Levels</option>
+<option value="100">100 Level</option>
+<option value="200">200 Level</option>
+<option value="300">300 Level</option>
+<option value="400">400 Level</option>
+</select>
+<div class="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Date Range Picker Mock -->
+<div class="w-64">
+<button class="w-full h-11 bg-[#e7f3ee] dark:bg-white/5 rounded-lg text-sm font-medium px-4 flex items-center justify-between text-[#0d1b15] dark:text-white hover:bg-[#d9ede4] dark:hover:bg-white/10 transition-colors">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">calendar_today</span>
+<span>Oct 1 - Oct 31, 2023</span>
+</div>
+<span class="material-symbols-outlined text-lg">event</span>
+</button>
+</div>
+<!-- Reset Filters -->
+<button class="h-11 px-4 text-sm font-medium text-[#4c9a77] hover:text-[#0d1b15] dark:hover:text-primary transition-colors">
+                    Reset
+                </button>
+</div>
+<!-- Data Table Container -->
+<div class="bg-white dark:bg-[#10221a] border border-[#e7f3ee] dark:border-white/10 rounded-xl shadow-sm overflow-hidden">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#f8fcfa] dark:bg-white/5 border-b border-[#e7f3ee] dark:border-white/10">
+<th class="px-6 py-4 text-sm font-bold text-[#4c9a77] uppercase tracking-wider">Academic Level</th>
+<th class="px-6 py-4 text-sm font-bold text-[#4c9a77] uppercase tracking-wider">No. of Payments</th>
+<th class="px-6 py-4 text-sm font-bold text-[#4c9a77] uppercase tracking-wider text-right">Total Amount (₦)</th>
+<th class="px-6 py-4 text-sm font-bold text-[#4c9a77] uppercase tracking-wider">Reporting Period</th>
+<th class="px-6 py-4 text-sm font-bold text-[#4c9a77] uppercase tracking-wider text-center">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#e7f3ee] dark:divide-white/5">
+<tr class="hover:bg-[#f8fcfa] dark:hover:bg-white/5 transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">100</div>
+<span class="font-semibold">100 Level</span>
+</div>
+</td>
+<td class="px-6 py-5 text-sm">245</td>
+<td class="px-6 py-5 text-sm font-bold text-right">₦ 1,225,000.00</td>
+<td class="px-6 py-5 text-sm opacity-80">Oct 01 - Oct 31, 2023</td>
+<td class="px-6 py-5 text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/20 text-green-700 dark:text-primary">Verified</span>
+</td>
+</tr>
+<tr class="hover:bg-[#f8fcfa] dark:hover:bg-white/5 transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 font-bold text-xs">200</div>
+<span class="font-semibold">200 Level</span>
+</div>
+</td>
+<td class="px-6 py-5 text-sm">198</td>
+<td class="px-6 py-5 text-sm font-bold text-right">₦ 990,000.00</td>
+<td class="px-6 py-5 text-sm opacity-80">Oct 01 - Oct 31, 2023</td>
+<td class="px-6 py-5 text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/20 text-green-700 dark:text-primary">Verified</span>
+</td>
+</tr>
+<tr class="hover:bg-[#f8fcfa] dark:hover:bg-white/5 transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center text-amber-600 font-bold text-xs">300</div>
+<span class="font-semibold">300 Level</span>
+</div>
+</td>
+<td class="px-6 py-5 text-sm">182</td>
+<td class="px-6 py-5 text-sm font-bold text-right">₦ 910,000.00</td>
+<td class="px-6 py-5 text-sm opacity-80">Oct 01 - Oct 31, 2023</td>
+<td class="px-6 py-5 text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/20 text-green-700 dark:text-primary">Verified</span>
+</td>
+</tr>
+<tr class="hover:bg-[#f8fcfa] dark:hover:bg-white/5 transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center text-purple-600 font-bold text-xs">400</div>
+<span class="font-semibold">400 Level</span>
+</div>
+</td>
+<td class="px-6 py-5 text-sm">210</td>
+<td class="px-6 py-5 text-sm font-bold text-right">₦ 1,050,000.00</td>
+<td class="px-6 py-5 text-sm opacity-80">Oct 01 - Oct 31, 2023</td>
+<td class="px-6 py-5 text-center">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400">Auditing</span>
+</td>
+</tr>
+</tbody>
+<tfoot class="bg-[#f8fcfa] dark:bg-white/5 font-bold">
+<tr>
+<td class="px-6 py-4 text-base">Grand Total</td>
+<td class="px-6 py-4 text-base">835</td>
+<td class="px-6 py-4 text-base text-right text-primary">₦ 4,175,000.00</td>
+<td class="px-6 py-4" colspan="2"></td>
+</tr>
+</tfoot>
+</table>
+</div>
+<!-- Summary Insight Cards -->
+<div class="grid grid-cols-3 gap-6">
+<div class="bg-white dark:bg-white/5 p-6 rounded-xl border border-[#e7f3ee] dark:border-white/10">
+<p class="text-sm text-[#4c9a77] mb-1 font-medium">Compliance Rate</p>
+<h3 class="text-2xl font-bold">98.4%</h3>
+<div class="mt-4 h-2 bg-[#e7f3ee] dark:bg-white/10 rounded-full overflow-hidden">
+<div class="bg-primary h-full" style="width: 98.4%"></div>
+</div>
+</div>
+<div class="bg-white dark:bg-white/5 p-6 rounded-xl border border-[#e7f3ee] dark:border-white/10">
+<p class="text-sm text-[#4c9a77] mb-1 font-medium">Flagged Records</p>
+<h3 class="text-2xl font-bold">12</h3>
+<p class="text-xs text-red-500 mt-2 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">warning</span> Needs review
+                    </p>
+</div>
+<div class="bg-white dark:bg-white/5 p-6 rounded-xl border border-[#e7f3ee] dark:border-white/10">
+<p class="text-sm text-[#4c9a77] mb-1 font-medium">Last Audit Date</p>
+<h3 class="text-2xl font-bold">Oct 30, 2023</h3>
+<p class="text-xs opacity-60 mt-2">Verified by Controller</p>
+</div>
+</div>
+</div>
+<footer class="mt-auto px-10 py-6 text-center text-xs opacity-50 border-t border-[#e7f3ee] dark:border-white/10">
+            © 2024 NACOS Audit Management System. Confidential Records.
+        </footer>
+</main>
+</body></html>
