@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Auditor Analytics Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec8a",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#10221a",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-left: 4px solid white;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-[#0d1b15] dark:text-white transition-colors duration-200">
+<div class="flex h-screen overflow-hidden">
+<!-- Sidebar -->
+<aside class="w-64 bg-background-dark text-white flex flex-col border-r border-white/10">
+<div class="p-6 flex flex-col gap-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center text-background-dark font-bold text-xl" data-alt="NACOS brand logo icon">N</div>
+<div class="flex flex-col">
+<h1 class="text-sm font-bold tracking-tight uppercase">NACOS Auditor</h1>
+<p class="text-[10px] text-primary font-medium opacity-80">Management System</p>
+</div>
+</div>
+<nav class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg active-nav text-white" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition-colors" href="#">
+<span class="material-symbols-outlined">description</span>
+<span class="text-sm font-medium">Reports</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-white/5 transition-colors mt-auto" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-sm font-medium">Logout</span>
+</a>
+</nav>
+</div>
+<div class="mt-auto p-6 border-t border-white/10">
+<div class="bg-primary/10 rounded-lg p-4">
+<p class="text-xs text-primary font-bold uppercase mb-1">Session</p>
+<p class="text-sm font-medium">2023/2024 Academic</p>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col overflow-y-auto">
+<!-- Top Navigation -->
+<header class="sticky top-0 z-10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-[#cfe7dd] dark:border-white/10 px-8 py-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<h2 class="text-xl font-bold tracking-tight">Auditor Dashboard</h2>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex flex-col items-end mr-2">
+<span class="text-sm font-semibold">Admin Auditor</span>
+<span class="text-[10px] text-gray-500 uppercase">Head Office</span>
+</div>
+<div class="size-10 rounded-full bg-primary/20 border-2 border-primary flex items-center justify-center overflow-hidden" data-alt="Auditor user profile picture">
+<span class="material-symbols-outlined text-background-dark">person</span>
+</div>
+</div>
+</header>
+<div class="p-8 max-w-7xl mx-auto w-full">
+<!-- Stats Section -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+<div class="bg-white dark:bg-white/5 p-6 rounded-xl border border-[#cfe7dd] dark:border-white/10 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary/20 rounded-lg">
+<span class="material-symbols-outlined text-background-dark dark:text-primary">receipt_long</span>
+</div>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium">Total Receipts Generated</p>
+<p class="text-2xl font-bold mt-1">1,250</p>
+</div>
+<div class="bg-white dark:bg-white/5 p-6 rounded-xl border border-[#cfe7dd] dark:border-white/10 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary/20 rounded-lg">
+<span class="material-symbols-outlined text-background-dark dark:text-primary">payments</span>
+</div>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium">Total Revenue Collected</p>
+<p class="text-2xl font-bold mt-1">₦4,500,000</p>
+</div>
+<div class="bg-white dark:bg-white/5 p-6 rounded-xl border border-[#cfe7dd] dark:border-white/10 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary/20 rounded-lg">
+<span class="material-symbols-outlined text-background-dark dark:text-primary">how_to_reg</span>
+</div>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium">Total Verified Students</p>
+<p class="text-2xl font-bold mt-1">1,180</p>
+</div>
+<div class="bg-white dark:bg-white/5 p-6 rounded-xl border border-[#cfe7dd] dark:border-white/10 shadow-sm">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary/20 rounded-lg">
+<span class="material-symbols-outlined text-background-dark dark:text-primary">bolt</span>
+</div>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-medium">Today's Activity</p>
+<p class="text-2xl font-bold mt-1">42</p>
+</div>
+</div>
+<!-- Main Section Header -->
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-[22px] font-bold tracking-tight">Payment Distribution by Level</h3>
+<div class="flex gap-2">
+<button class="px-4 py-2 text-sm font-medium bg-white dark:bg-white/5 border border-[#cfe7dd] dark:border-white/10 rounded-lg hover:bg-gray-50 transition-colors">Last 7 Days</button>
+<button class="px-4 py-2 text-sm font-medium bg-primary text-background-dark rounded-lg font-bold">Export Report</button>
+</div>
+</div>
+<!-- Chart Card -->
+<div class="bg-white dark:bg-white/5 p-8 rounded-xl border border-[#cfe7dd] dark:border-white/10 shadow-sm">
+<div class="flex flex-col gap-2 mb-8">
+<div class="flex items-baseline gap-2">
+<p class="text-3xl font-bold tracking-tight">₦4,500,000</p>
+<span class="text-primary text-sm font-bold flex items-center">
+<span class="material-symbols-outlined text-xs">arrow_upward</span> 12%
+                            </span>
+</div>
+<p class="text-gray-500 text-sm">Total revenue breakdown per academic year</p>
+</div>
+<div class="grid grid-cols-4 gap-8 items-end h-64 px-4 border-b border-[#cfe7dd] dark:border-white/10 pb-2">
+<!-- Bar 100L -->
+<div class="flex flex-col items-center gap-4 group h-full justify-end">
+<div class="w-full bg-primary/30 rounded-t-lg transition-all duration-300 group-hover:bg-primary" style="height: 85%;">
+<div class="opacity-0 group-hover:opacity-100 bg-background-dark text-white text-[10px] py-1 px-2 rounded absolute -translate-y-8 left-1/2 -translate-x-1/2 whitespace-nowrap">₦1,500,000</div>
+</div>
+</div>
+<!-- Bar 200L -->
+<div class="flex flex-col items-center gap-4 group h-full justify-end">
+<div class="w-full bg-primary/50 rounded-t-lg transition-all duration-300 group-hover:bg-primary" style="height: 65%;">
+<div class="opacity-0 group-hover:opacity-100 bg-background-dark text-white text-[10px] py-1 px-2 rounded absolute -translate-y-8 left-1/2 -translate-x-1/2 whitespace-nowrap">₦1,200,000</div>
+</div>
+</div>
+<!-- Bar 300L -->
+<div class="flex flex-col items-center gap-4 group h-full justify-end">
+<div class="w-full bg-primary/70 rounded-t-lg transition-all duration-300 group-hover:bg-primary" style="height: 45%;">
+<div class="opacity-0 group-hover:opacity-100 bg-background-dark text-white text-[10px] py-1 px-2 rounded absolute -translate-y-8 left-1/2 -translate-x-1/2 whitespace-nowrap">₦800,000</div>
+</div>
+</div>
+<!-- Bar 400L -->
+<div class="flex flex-col items-center gap-4 group h-full justify-end">
+<div class="w-full bg-primary rounded-t-lg transition-all duration-300 group-hover:brightness-110" style="height: 55%;">
+<div class="opacity-0 group-hover:opacity-100 bg-background-dark text-white text-[10px] py-1 px-2 rounded absolute -translate-y-8 left-1/2 -translate-x-1/2 whitespace-nowrap">₦1,000,000</div>
+</div>
+</div>
+</div>
+<!-- Labels -->
+<div class="grid grid-cols-4 gap-8 pt-4">
+<p class="text-center text-sm font-bold text-gray-500">100L</p>
+<p class="text-center text-sm font-bold text-gray-500">200L</p>
+<p class="text-center text-sm font-bold text-gray-500">300L</p>
+<p class="text-center text-sm font-bold text-gray-500">400L</p>
+</div>
+</div>
+<!-- Recent Activities Section -->
+<div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="bg-white dark:bg-white/5 p-6 rounded-xl border border-[#cfe7dd] dark:border-white/10 shadow-sm">
+<h4 class="font-bold mb-4">Recent Verifications</h4>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-3 bg-background-light dark:bg-white/5 rounded-lg">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-xs text-background-dark">person</span>
+</div>
+<div>
+<p class="text-sm font-semibold">Abiodun James</p>
+<p class="text-[10px] text-gray-500">Computer Science • 100L</p>
+</div>
+</div>
+<span class="text-[10px] font-bold px-2 py-1 bg-primary/20 text-background-dark rounded-full">VERIFIED</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-background-light dark:bg-white/5 rounded-lg">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-xs text-background-dark">person</span>
+</div>
+<div>
+<p class="text-sm font-semibold">Sarah Benson</p>
+<p class="text-[10px] text-gray-500">Cyber Security • 400L</p>
+</div>
+</div>
+<span class="text-[10px] font-bold px-2 py-1 bg-primary/20 text-background-dark rounded-full">VERIFIED</span>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-white/5 p-6 rounded-xl border border-[#cfe7dd] dark:border-white/10 shadow-sm">
+<h4 class="font-bold mb-4">Quick Insights</h4>
+<div class="space-y-4">
+<div class="p-4 border-l-4 border-primary bg-primary/5 rounded-r-lg">
+<p class="text-sm font-medium">Revenue is up by 15% compared to the same week last session.</p>
+<p class="text-[11px] text-gray-500 mt-1">Audit Tip: Ensure all carryover payments are cross-referenced with bursary logs.</p>
+</div>
+<div class="p-4 border-l-4 border-yellow-400 bg-yellow-400/5 rounded-r-lg">
+<p class="text-sm font-medium">300L level exhibits the slowest payment rate this semester.</p>
+<p class="text-[11px] text-gray-500 mt-1">Recommended Action: Send session fee reminders to 300L departmental reps.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
