@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Auditor Login Portal - NACOS ERGS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec8a",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#10221a",
+                    },
+                    fontFamily: {
+                        "display": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Public Sans", "Noto Sans", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-[#cfe7dd] dark:border-white/10 px-10 py-3 bg-white dark:bg-background-dark">
+<div class="flex items-center gap-4 text-[#0d1b15] dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"></path>
+</svg>
+</div>
+<h2 class="text-[#0d1b15] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">NACOS ERGS</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-[#0d1b15] dark:text-white/80 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Contact Support</a>
+<a class="text-[#0d1b15] dark:text-white/80 text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">About System</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-[#0d1b15] text-sm font-bold leading-normal tracking-[0.015em] hover:opacity-90 transition-opacity">
+<span class="truncate">Secure Portal</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 flex items-center justify-center py-12 px-4">
+<div class="layout-content-container flex flex-col max-w-[480px] w-full bg-white dark:bg-[#1a2e26] rounded-xl shadow-xl overflow-hidden border border-[#cfe7dd] dark:border-white/5">
+<!-- Logo/Image Header inside Card -->
+<div class="@container">
+<div class="px-6 pt-8 pb-4 flex justify-center">
+<div class="size-16 bg-primary/10 rounded-full flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-4xl">verified_user</span>
+</div>
+</div>
+</div>
+<!-- Headline and Meta Text -->
+<div class="text-center px-8">
+<h1 class="text-[#0d1b15] dark:text-white tracking-light text-[32px] font-bold leading-tight pb-1">Auditor Access</h1>
+<p class="text-[#4c9a77] dark:text-primary/70 text-sm font-medium leading-normal pb-6">Authorised access only</p>
+</div>
+<!-- Login Form -->
+<form class="px-8 pb-10 space-y-4">
+<div class="flex flex-col gap-1">
+<label class="flex flex-col w-full">
+<p class="text-[#0d1b15] dark:text-white/90 text-sm font-semibold leading-normal pb-2">Username or Email</p>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[#4c9a77] text-xl">person</span>
+<input class="form-input flex w-full rounded-lg text-[#0d1b15] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary border border-[#cfe7dd] dark:border-white/10 bg-[#f8fcfa] dark:bg-background-dark/50 h-12 placeholder:text-[#4c9a77]/60 pl-11 pr-4 text-base font-normal" placeholder="Enter your username" value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-col gap-1">
+<label class="flex flex-col w-full">
+<p class="text-[#0d1b15] dark:text-white/90 text-sm font-semibold leading-normal pb-2">Password</p>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[#4c9a77] text-xl">lock</span>
+<input class="form-input flex w-full rounded-lg text-[#0d1b15] dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary border border-[#cfe7dd] dark:border-white/10 bg-[#f8fcfa] dark:bg-background-dark/50 h-12 placeholder:text-[#4c9a77]/60 pl-11 pr-4 text-base font-normal" placeholder="••••••••" type="password" value=""/>
+</div>
+</label>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div class="flex items-center gap-2">
+<input class="rounded border-[#cfe7dd] text-primary focus:ring-primary" id="remember" type="checkbox"/>
+<label class="text-xs text-[#4c9a77] dark:text-white/60" for="remember">Remember device</label>
+</div>
+<a class="text-xs text-primary font-semibold hover:underline" href="#">Forgot password?</a>
+</div>
+<button class="w-full flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-primary text-[#0d1b15] text-base font-bold leading-normal tracking-[0.015em] hover:shadow-lg hover:brightness-105 transition-all mt-4" type="submit">
+<span class="truncate">Login to ERGS</span>
+</button>
+</form>
+<!-- Footer Info -->
+<div class="bg-[#f8fcfa] dark:bg-background-dark/20 border-t border-[#cfe7dd] dark:border-white/5 py-4 px-8">
+<p class="text-[10px] text-center text-[#4c9a77] dark:text-white/40 uppercase tracking-widest font-bold">
+                        National Audit Control Operations System
+                    </p>
+</div>
+</div>
+</main>
+<!-- Page Footer -->
+<footer class="py-6 px-10 text-center">
+<p class="text-xs text-[#4c9a77] dark:text-white/40">
+                © 2024 NACOS Institutional ERGS Management. All rights reserved.
+                <br/>
+                Security monitored for auditing purposes.
+            </p>
+</footer>
+</div>
+</body></html>
