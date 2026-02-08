@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>NACOS E-Receipt</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen flex flex-col items-center">
+
+  <!-- RECEIPT -->
+  <div class="w-full flex justify-center mt-8">
+    <div class="bg-white border-2 border-blue-600 w-full max-w-[794px] p-8">
+
+      <!-- HEADER -->
+      <div class="text-center text-green-700 font-semibold text-sm leading-tight">
+        <p class="text-lg font-bold">NIGERIA ASSOCIATION OF COMPUTING STUDENTS (NACOS)</p>
+        <p>DEPARTMENT OF COMPUTER SCIENCE</p>
+        <p>FACULTY OF PHYSICAL SCIENCES</p>
+        <p>UNIVERSITY OF MAIDUGURI</p>
+        <p>P.M.B 1069 UNIMAID</p>
+        <p class="italic">MOTTO: TOWARDS ADVANCED COMPUTING</p>
+      </div>
+
+      <!-- LOGOS + TITLE -->
+      <div class="flex items-center justify-between mt-6">
+        <!-- NACOS LOGO -->
+        <div class="w-20 h-20 border border-dashed border-gray-400 flex items-center justify-center text-xs">
+          NACOS LOGO
+        </div>
+
+        <!-- RECEIPT TITLE -->
+        <div class="px-6 py-2 border-2 border-blue-600 rounded text-blue-700 font-bold">
+          E-RECEIPT
+        </div>
+
+        <!-- UNIMAID LOGO -->
+        <div class="w-20 h-20 border border-dashed border-gray-400 flex items-center justify-center text-xs">
+          UNIMAID LOGO
+        </div>
+      </div>
+
+      <!-- RECEIPT NUMBER -->
+      <div class="mt-4 text-right text-sm">
+        <span class="font-semibold">Receipt No:</span>
+        <span class="ml-2 tracking-wider">NACOS/2026/200/00045</span>
+      </div>
+
+      <!-- BODY -->
+      <div class="mt-6 space-y-4 text-sm">
+
+        <div class="flex gap-4">
+          <span class="w-32 font-semibold">ID NO:</span>
+          <span class="flex-1 border-b border-black">22/08/05/0092</span>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="w-32 font-semibold">NAME:</span>
+          <span class="flex-1 border-b border-black">Abu-Sheriff Mustapha</span>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="w-32 font-semibold">DEPT:</span>
+          <span class="flex-1 border-b border-black">Computer Science</span>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="w-32 font-semibold">LEVEL:</span>
+          <span class="flex-1 border-b border-black">200 Level</span>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="w-32 font-semibold">BEING PAYMENT FOR:</span>
+          <span class="flex-1 border-b border-black">
+            NACOS Dept. Dues 2023/2024 Session
+          </span>
+        </div>
+
+        <div class="flex gap-4">
+          <span class="w-32 font-semibold">AMOUNT:</span>
+          <span class="flex-1 border-b border-black font-semibold">
+            ₦2,000
+          </span>
+        </div>
+
+      </div>
+
+      <!-- SIGNATURE -->
+      <div class="mt-10 flex justify-end">
+        <div class="text-center">
+          <div class="w-40 h-16 border-b border-black mb-1 flex items-center justify-center text-xs text-gray-500">
+            Signature
+          </div>
+          <p class="text-xs">Receiver’s Sign / Date</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- DOWNLOAD BUTTON -->
+  <div class="mt-10 mb-6">
+    <button
+      class="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded shadow hover:bg-blue-700 transition">
+      ⬇ Download PDF
+    </button>
+  </div>
+
+</body>
+</html>
